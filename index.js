@@ -3,6 +3,10 @@ const name = document.getElementById("name");
 const whatsappNumber = document.getElementById("whatsappNumber");
 const status = document.getElementById("status");
 
+const fatherName = document.getElementById("fatherName")
+const addhress = document.getElementById("fullAddress")
+const gender = document.getElementById("gender")
+
 const sc = "https://script.google.com/macros/s/AKfycbwkR3qHhcfYxf35tI9UmKedoMycNh1_tUfCzAqCQ-uCyfLnAsUfbXujUHa1lK46NKsi/exec";
 
 submitBtn.addEventListener("click", function (e) {
@@ -18,7 +22,10 @@ submitBtn.addEventListener("click", function (e) {
     const data = {
         name: name.value.trim(),
         whatsappNumber: whatsappNumber.value.trim(),
-        status: status.value
+        status: status.value,
+        fatherName: fatherName.value,
+        addhress: addhress.value,
+        gender: gender.value
     };
     fetch(`${sc}`, {
         method: "POST",
