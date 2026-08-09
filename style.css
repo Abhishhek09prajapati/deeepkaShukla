@@ -117,6 +117,25 @@ button:hover{
 
 }
 
+.divPlease{
+    width: max-content;
+    height: max-content;
+    border: 1px solid black;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-image: linear-gradient(green,rgb(42, 179, 30));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 50px;
+  
+
+
+
+}
+
 @media(max-width:600px){
 
     .card{
