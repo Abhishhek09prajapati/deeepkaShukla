@@ -16,33 +16,33 @@ fetch(`https://opensheet.elk.sh/${sh}/myListData`)
                 <div class="btnBox">
                     <button class="shareBtn">↗ Share</button>
                     <button class="CopyBTn">📋 Copy</button>
+                    <button class="goto">📋 Go To</button>
                 </div>
             `;
 
             // Copy button
             div.querySelector(".CopyBTn").addEventListener("click", () => {
                 navigator.clipboard.writeText(l.links);
-
                 alert("Copied: " + l.links);
             });
 
+            div.querySelector(".goto").addEventListener("click", () => {
+                window.open(l.links,"_blanks")
+            });
+
+
             // Share button
             div.querySelector(".shareBtn").addEventListener("click", async () => {
-
                 if (navigator.share) {
-
                     await navigator.share({
                         title: "My Data",
                         text: l.links
                     });
-
                 } else {
-
                     navigator.clipboard.writeText(l.links);
                     alert("Share not supported. Data copied!");
                 }
             });
-
             myList.appendChild(div);
         });
 

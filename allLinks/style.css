@@ -145,6 +145,17 @@ body {
     background: #16a34a;
 }
 
+.goto {
+    border: none;
+    padding: 9px 14px;
+    border-radius: 8px;
+    background-color: rgb(142, 238, 16);
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+
+}
+
 .CopyBTn:hover {
     background: #15803d;
     transform: translateY(-2px);
