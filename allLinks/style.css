@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+    min-height: 100vh;
+    padding: 30px 15px;
+    color: #1e293b;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* Heading */
+.container h3 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #1e40af;
+    position: relative;
+}
+
+.container h3::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    margin: 10px auto 0;
+    border-radius: 10px;
+    background: #2563eb;
+}
+
+/* List container */
+#myList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+/* If JS creates div/cards inside myList */
+#myList>div {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 18px;
+    transition: 0.25s ease;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+}
+
+#myList>div:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.12);
+    border-color: #93c5fd;
+}
+
+/* Text inside cards */
+#myList>div p {
+    margin: 7px 0;
+    line-height: 1.5;
+    color: #475569;
+}
+
+#myList>div strong {
+    color: #0f172a;
+}
+
+/* Links */
+#myList a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 9px 15px;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+#myList a:hover {
+    background: #1d4ed8;
+}
+
+.dataList {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    background: white;
+    padding: 15px;
+    margin-bottom: 12px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.dataList label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+    word-break: break-word;
+}
+
+.btnBox {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.shareBtn,
+.CopyBTn {
+    border: none;
+    padding: 9px 14px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.shareBtn {
+    background: #2563eb;
+}
+
+.shareBtn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.CopyBTn {
+    background: #16a34a;
+}
+
+.CopyBTn:hover {
+    background: #15803d;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+
+    .dataList {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .btnBox {
+        width: 100%;
+    }
+
+    .shareBtn,
+    .CopyBTn {
+        flex: 1;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px 10px;
+    }
+
+    .container {
+        padding: 18px;
+        border-radius: 16px;
+    }
+
+    .container h3 {
+        font-size: 23px;
+        margin-bottom: 20px;
+    }
+
+    #myList {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    #myList>div {
+        padding: 15px;
+    }
+}
